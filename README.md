@@ -75,7 +75,8 @@ export default defineConfig([
 
 
 
+
 ## Latest Release Info
-- Version: v1.0.2
+- Version: v1.0.3
 - PR Title: Manual push to main
-- Chuck Norris Joke: Chuck Norris doesn't look for religious guidance, religious guidance looks for him
+- Chuck Norris Joke: During a recent talk show interview Chuck Norris was asked what he thought of Justin Bieber. Chuck said he thought Bieber was a waste of perfectly good toilet paper.
