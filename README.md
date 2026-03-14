@@ -79,7 +79,8 @@ export default defineConfig([
 
 
 
+
 ## Latest Release Info
-- Version: v1.0.5
+- Version: v1.0.7
 - PR Title: Manual push to main
-- Chuck Norris Joke: In the 1980s, Chuck Norris dry fired a gun eastward. The result was the Chernobyl Incident
+- Chuck Norris Joke: A mere slap in your face from Chuck Norris causes permanent, life long strabismus.
