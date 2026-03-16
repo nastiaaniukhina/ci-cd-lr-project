@@ -1,0 +1,51 @@
+name: Release
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+
+    - name: Get latest version
+      id: vars
+      run: |
+        VERSION="v1.0.$GITHUB_RUN_NUMBER"
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+    - name: Create Git tag
+      run: git tag $VERSION && git push origin $VERSION
+
+    - name: Get a Chuck Norris joke
+      id: joke
+      run: |
+        JOKE=$(curl -s https://api.chucknorris.io/jokes/random | jq -r '.value')
+        echo "JOKE=$JOKE" >> $GITHUB_ENV
+
+    - name: Update README
+      run: |
+        PR_TITLE="Automated Release"
+        echo "## Latest Release Info
+        - Version: $VERSION
+        - PR Title: $PR_TITLE
+        - Chuck Norris Joke: $JOKE" >> README.md
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@users.noreply.github.com"
+        git add README.md
+        git commit -m "Update README with latest release info"
+        git push
+
+    - name: Create GitHub Release
+      uses: ncipollo/release-action@v1
+      with:
+        tag: ${{ env.VERSION }}
