@@ -88,3 +88,7 @@ export default defineConfig([
 - Version: v1.0.1
 - PR Title: Automated Release
 - Chuck Norris Joke: Chuck Norris does not forget his friends and loved ones birthdays. He decides when their birthdays are.
+## Latest Release Info
+- Version: v1.0.2
+- PR Title: Automated Release
+- Chuck Norris Joke: Chuck Norris' favorite flavor of gum is Tarantula.
