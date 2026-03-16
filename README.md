@@ -98,3 +98,7 @@ export default defineConfig([
 - Version: v1.0.4
 - PR Title: Automated Release
 - Chuck Norris Joke: Chuck Norris is the only man who can kick the shit OUT of you, then back in.
+## Latest Release Info
+- Version: v1.0.5
+- PR Title: Automated Release
+- Chuck Norris Joke: Barack Obama recently stated that he considers it 'a great honour and privilege' to shine Chuck Norris' shoes every Wednesday.
