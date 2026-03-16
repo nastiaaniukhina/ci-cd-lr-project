@@ -74,10 +74,12 @@ export default defineConfig([
 ```
 # ci-cd-lr-project
 
+## Lab Implementation Summary
 
-
-
-
+- CI workflow для автоматичної перевірки коду (lint, test, build) — файл `.github/workflows/ci.yml`
+- Release workflow для автоматичного створення тегу, GitHub Release та оновлення README з Chuck Norris жартом — файл `.github/workflows/release.yml`
+- Deploy workflow для автоматичного публікування на GitHub Pages — файл `.github/workflows/deploy.yml`
+- README.md оновлюється автоматично після кожного релізу, але старі блоки Latest Release Info **не видаляються**, тому зберігаються всі попередні версії жартів.
 
 
 ## Latest Release Info
