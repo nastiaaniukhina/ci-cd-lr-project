@@ -84,3 +84,7 @@ export default defineConfig([
 - Version: v1.0.7
 - PR Title: Manual push to main
 - Chuck Norris Joke: A mere slap in your face from Chuck Norris causes permanent, life long strabismus.
+## Latest Release Info
+- Version: v1.0.1
+- PR Title: Automated Release
+- Chuck Norris Joke: Chuck Norris does not forget his friends and loved ones birthdays. He decides when their birthdays are.
