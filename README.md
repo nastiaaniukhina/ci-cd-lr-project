@@ -92,3 +92,7 @@ export default defineConfig([
 - Version: v1.0.2
 - PR Title: Automated Release
 - Chuck Norris Joke: Chuck Norris' favorite flavor of gum is Tarantula.
+## Latest Release Info
+- Version: v1.0.4
+- PR Title: Automated Release
+- Chuck Norris Joke: Chuck Norris is the only man who can kick the shit OUT of you, then back in.
