@@ -33,20 +33,19 @@ jobs:
         echo "JOKE=$JOKE" >> $GITHUB_ENV
 
     - name: Update README
-  run: |
-    PR_TITLE="Automated Release"
-    # Видаляємо старий блок Latest Release Info
-    sed -i '/## Latest Release Info/,$d' README.md || true
-    # Додаємо новий блок
-    cat <<EOF >> README.md
-## Latest Release Info
-- Version: $VERSION
-- PR Title: $PR_TITLE
-- Chuck Norris Joke: $JOKE
-EOF
+      run: |
+        PR_TITLE="Automated Release"
+        echo "## Latest Release Info
+        - Version: $VERSION
+        - PR Title: $PR_TITLE
+        - Chuck Norris Joke: $JOKE" >> README.md
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@users.noreply.github.com"
+        git add README.md
+        git commit -m "Update README with latest release info"
+        git push
 
-    git config --global user.name "github-actions"
-    git config --global user.email "github-actions@users.noreply.github.com"
-    git add README.md
-    git commit -m "Update README with latest release info"
-    git push
+    - name: Create GitHub Release
+      uses: ncipollo/release-action@v1
+      with:
+        tag: ${{ env.VERSION }}
